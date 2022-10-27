@@ -135,14 +135,20 @@ carro.<método>; // mensagem via objeto
 #### *Exerc4. Crie objetos da classe Carro e use metodos get/set. Passe também uma mensagem para o cálculo do total para encher o tanque.
 
 ```
-Carro carro = new Carro();
+class App{
+    static void main(String[] args){
 
-carro.setModelo("Gol");
-System.out.println(carro.getTanque()); // 0
+        Carro carro = new Carro();
 
-carro.encherTanque(55); // Total pago é de $187
+        carro.setModelo("Gol");
+        
+        System.out.println(carro.getTanque()); // 0
 
-System.out.println(carro.getTanque()); //
+        carro.encherTanque(55); // Total pago é de $187
+
+        System.out.println(carro.getTanque()); // 55
+    }
+}
 ```
 
 ## As relações
