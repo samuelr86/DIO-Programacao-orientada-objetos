@@ -27,7 +27,7 @@ capacidade de criar novas unidades de código a partir de outras já existentes.
 ### Encapsulamento
 capacidade de esconder complexidades e proteger dados.
 
-## A estrutura
+## A Estrutura
 ### Classe
 é uma estrutura que abstrai(serve de molde) um conjunto de objetos com características similares. Define o comportamento de seus objetos através de métodos e os estados possíveis deste objetos através dos atributos. Em outras palavras descreve os serviços providos por seus objetos e quais informações eles podem armazenar.
 Dicas de criação:
@@ -151,6 +151,101 @@ class App{
 }
 ```
 
-## As relações
+## As Relações (Herança, Associação e Interface)
+
+### Herança
+é um relacionamento entre classes em que uma classe chamada de subclasse é uma extensão, um subtipo, de outra classe chamada superclasse.
+Devido a isto, a subclasse consegue reaprovietar os atributos e métodos dela. Além dos que venha  aser herdados, a subclase pode definir seus próprios membros (atributos e métodos).
+a herança é usada para criar subtipos mais especializados.
+
+```
+class A extends B {
+
+}
+```
+#### Exerc 1 - Crie a classe "Veículo", Carro e Moto. Faça a relação de herança que julgar necessária.
+
+```
+class Veiculo{
+
+}
+class Carro extends Veiculo{
+
+}
+class Moto extends Veiculo{
+
+}
+```
+
+### Polimorfismo e Sobrescrita
+ - Polimorfismo:  a mesma ação, se comportando diferente.
+
+quando uma subclasse faz uso de um método e se comportando de acordo como o objeto em questão.
+ - Sobrescrita: a mesma ação, podendo se comportar diferente.
+
+quando uma subclasse pode fazer uso de um método da superclasse rescrevendo ou não.
+
+### Associação
+possibilita um relacionamento entre classes/objetos no qual estes possam pedir ajuda a outras classes e representar de forma completa o conceito ao qual se destinam. Neste tipo de relacionamento, as classes e os objetos interagem entre si para atingir seus objetivos.
+
+#### Tipos
+ - Estrutura:
+    - Composição: "Com parte todo"
+        - Uma parte(endereço) só existe se tiver o todo(Pessoa), se Pessoa deixar de existir, Endereco também deixa de existir.
+        
+        ```
+        class Pessoa{
+            Endereco endereco;
+        }
+        ```
+
+    - Agregação: "Sem parte todo"
+        - Uma parte(Aluno) pode existir sem o todo(Disciplina).
+
+        ```
+        class Disciplina{
+            Aluno aluno;
+        }
+        ```
+
+ - Comportamental:
+    - Dependência: "Depende de" 
+        - Uma parte(Compra) depende de outra(Cupom)
+
+        ```
+        class Compra {
+            Cliente cliente;
+
+            finalizar(Cupom cupom){}
+            finalizar(){}
+        }
+
+        class Cupom{
+
+        }
+        ```
+### Interface
+define um contrato que deve ser seguido pela classe que a implementa. Quando uma classe implementa uma interface, ela se compromete a realizar todos os comportamentos que a interface disponibiliza.
+
+```
+interface A{
+    ...
+}
+
+class B implements A{
+    ...
+}
+```
+
+#### Exerc 2 - Crie uma interface chamada OperacaoMatematica, também crie 4 métodos das operações básicas.
+
+```
+interface OperacaoMatematica{
+    void soma(double operando1, double operando2);
+    void subtracao(double operando1, double operando2);
+    void multiplicacao(double operando1, double operando2);
+    void divisao(double operando1, double operando2);
+}
+```
 
 ## A Organização
