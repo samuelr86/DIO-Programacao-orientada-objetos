@@ -249,3 +249,41 @@ interface OperacaoMatematica{
 ```
 
 ## A Organização
+
+### Pacotes
+são uma organização física ou lógica criada para separar classes com responsabilidades distintas. Com isso, espera-se que a aplicação fique mais organizada e seja possível separar classes de finalidades e representatividades diferentes.
+
+```
+//criar pacotes
+package <nome do pacote>;
+
+//usar uma classe que está em outro pacote
+import <nome da classe>;
+
+```
+
+### Visibilidade
+também chamadas de modificadores de acesso, tem como finalidade determinar até que ponto uma classe, atributo ou método pode ser usado. A utilização de modificadores de acesso é fundamental para o uso efetivo da Orientação a Objetos. Algumas boas práticas e conceitos só são atingidos como o uso corretos deles.
+
+#### Tipos
+    - public
+        - visível em qualquer lugar
+
+        ```
+        public int i;
+        public void do ();
+        ```
+    - protected
+        - visível dentro da classe, mesmo pacote e subclasses
+
+        ```
+        protected int i;
+        protected void do();
+        ```
+    - private
+        - visível só dentro da classe
+
+        ```
+        private int i;
+        private void do();
+        ```
